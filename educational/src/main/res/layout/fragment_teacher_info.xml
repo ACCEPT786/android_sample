@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/portraitBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText.Flexible"
+                android:text="@string/ae_teacher_avatar" />
+
+            <ImageView
+                android:layout_width="@dimen/portrait_size"
+                android:layout_height="@dimen/portrait_size"
+                android:src="@drawable/img_inst_default" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xm_drawable_padding"
+                android:src="@drawable/ic_indicator_gray_right" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout
+            android:id="@+id/nameBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_name" />
+
+            <TextView
+                android:id="@+id/tvName"
+                style="@style/ItemContentText.Right.Indicator"
+                android:hint="@string/ae_teacher_name_hint" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout
+            android:id="@+id/genderBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_gender" />
+
+            <TextView
+                android:id="@+id/tvGender"
+                style="@style/ItemContentText.Right.Indicator"
+                android:hint="@string/ae_pls_select" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout
+            android:id="@+id/subjectBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_subject" />
+
+            <TextView
+                android:id="@+id/tvSubject"
+                style="@style/ItemContentText.Right.Indicator"
+                android:hint="@string/ae_pls_select" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout
+            android:id="@+id/phoneBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_phone" />
+
+            <TextView
+                android:id="@+id/tvPhone"
+                style="@style/ItemContentText.Right.Indicator"
+                android:hint="@string/ae_teacher_phone_hint" />
+        </LinearLayout>
+
+        <View style="@style/BlockDivider" />
+
+        <LinearLayout
+            android:id="@+id/statusBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText.Flexible"
+                android:text="@string/edit_teacher_enable" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/statusButton"
+                style="@style/XmSwitchButtonStyle" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Tip"
+            android:text="@string/edit_teacher_enable_tip" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,53 @@
+<resources>
+
+    <string name="system_setting">系统设置</string>
+
+    <string name="month_class_hour">本月课时</string>
+    <string name="month_salary">本月工资</string>
+    <string name="home_score">评分</string>
+    <string name="call_name">我要点名</string>
+
+    <string name="home_tab_teacher">老师</string>
+    <string name="home_tab_student">学员</string>
+    <string name="home_tab_classes">班级</string>
+    <string name="home_tab_course">课程/收费</string>
+    <string name="home_tab_course_schedule">课表</string>
+    <string name="home_tab_class_record">上课记录</string>
+    <string name="home_tab_notice">通知中心</string>
+    <string name="home_tab_student_archives">学员档案</string>
+
+
+    <!--添加或者编辑老师个人信息-->
+    <string name="ae_teacher_avatar">头像</string>
+    <string name="ae_teacher_name">姓名</string>
+    <string name="ae_teacher_gender">性别</string>
+    <string name="ae_pls_select">请选择</string>
+    <string name="ae_teacher_phone">手机号</string>
+    <string name="ae_teacher_phone_hint">请填写手机号</string>
+    <string name="ae_teacher_phone_tip">此手机号将作为该老师使用【老师端】的登录账号</string>
+    <string name="ae_teacher_mandatory">必填</string>
+    <string name="ae_teacher_name_hint">请填写老师姓名</string>
+    <string name="ae_teacher_subject">授课科目</string>
+    <string name="edit_teacher_enable">启用老师</string>
+    <string name="edit_teacher_enable_tip">停用后，老师将不能登录"老师端"，所在的班级也将移除该老师</string>
+
+
+    <string name="menu_add_teacher">添加教师</string>
+    <string name="total_month_class_hour">本月%s课时</string>
+    <string name="all_teacher_title">全部教师</string>
+    <string name="add_teacher_title">添加老师</string>
+
+
+
+    <string name="teacher_detail_tab_info">基本信息</string>
+    <string name="teacher_detail_tab_class">当前授课班级</string>
+    <string name="teacher_detail_tab_student">学员</string>
+
+    <string name="course_title">课程/收费</string>
+    <string name="search_course_hint">搜索课程名称</string>
+    <string name="course_tab_course">课程</string>
+    <string name="course_tab_goods">物品</string>
+    <string name="course_tab_cost">费用</string>
+
+
+</resources>

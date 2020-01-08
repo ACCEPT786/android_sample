@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="12.0dip"
+    android:paddingBottom="12.0dip">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/xmRefreshHeaderResetView"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/drop_down" />
+        <ProgressBar
+            android:id="@+id/xmRefreshHeaderLoadingProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:indeterminateDrawable="@drawable/xm_pull_to_refresh_anim" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/xmRefreshHeaderHintView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12.0dip"
+        android:layout_marginTop="2.0dip"
+        android:text="@string/xm_pull_to_refresh"
+        android:textColor="@color/xm_text_tertiary"
+        android:textSize="@dimen/xm_text_size_s" />
+</LinearLayout>

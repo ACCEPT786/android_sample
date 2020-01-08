@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_btn_color">#ffffab1a</color>
+    <color name="common_btn_disable_color">#80ff8534</color>
+    <color name="common_btn_pressed_color">#ffff8534</color>
+
+
+
+</resources>

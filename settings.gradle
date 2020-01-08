@@ -1,0 +1,2 @@
+include ':app', ':base', ':common', ':moonpopup', ':notification', ':educational', ':widget', ':account'
+rootProject.name='TeachAssistant'

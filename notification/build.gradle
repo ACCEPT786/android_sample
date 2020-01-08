@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+
+
+    defaultConfig {
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+
+        //todo change key
+        buildConfigField 'String', 'umengKey', '"5d19ef0a570df3b99c00119e"'
+        buildConfigField 'String', 'umengMsgSecret', '"c62fbdd29f19a2ce67d793b8b238c1f4"'
+
+        //todo change key
+        buildConfigField 'String', 'xiaomiId', '"2882303761518263238"'
+        buildConfigField 'String', 'xiaomiKey', '"5291826355238"'
+
+        buildConfigField 'String', 'resourcePackageName', '"com.moon.teachassistant"'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    testImplementation "junit:junit:$rootProject.junitVersion"
+    androidTestImplementation "androidx.test:runner:$rootProject.runnerVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+
+
+    //友盟推送
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    api 'com.umeng.umsdk:common:1.5.4'
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    api 'com.umeng.umsdk:utdid:1.1.5.3'
+    //PushSDK
+    api 'com.umeng.umsdk:push:6.0.1'
+
+    //华为推送
+    api 'com.umeng.umsdk:huawei-basetb:2.6.3.305'
+    api 'com.umeng.umsdk:huawei-pushtb:2.6.3.305'
+    api 'com.umeng.umsdk:huawei-umengaccs:1.2.1'
+
+    //小米推送
+    api 'com.umeng.umsdk:xiaomi-push:3.6.17'
+    api 'com.umeng.umsdk:xiaomi-umengaccs:1.1.0'
+
+    implementation project(path: ':common')
+}

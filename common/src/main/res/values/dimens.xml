@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="portrait_size">53.0dip</dimen>
+    <dimen name="portrait_size_m">40.0dip</dimen>
+    <dimen name="portrait_size_s">30.0dip</dimen>
+
+
+
+    <dimen name="tip_padding_top">6.0dip</dimen>
+
+    <dimen name="item_title_min_width">80.0dip</dimen>
+
+
+
+    <dimen name="min_unit">4.0dip</dimen>
+    <dimen name="min_unit_2x">8.0dip</dimen>
+    <dimen name="min_unit_3x">12.0dip</dimen>
+    <dimen name="min_unit_4x">16.0dip</dimen>
+</resources>

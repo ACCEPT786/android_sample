@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/drop_down1" />
+    <item android:duration="100" android:drawable="@drawable/drop_down2" />
+    <item android:duration="100" android:drawable="@drawable/drop_down3" />
+    <item android:duration="100" android:drawable="@drawable/drop_down4" />
+    <item android:duration="100" android:drawable="@drawable/drop_down5" />
+    <item android:duration="100" android:drawable="@drawable/drop_down6" />
+    <item android:duration="100" android:drawable="@drawable/drop_down7" />
+    <item android:duration="100" android:drawable="@drawable/drop_down8" />
+    <item android:duration="100" android:drawable="@drawable/drop_down9" />
+    <item android:duration="100" android:drawable="@drawable/drop_down10" />
+</animation-list>

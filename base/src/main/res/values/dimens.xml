@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--字体大小-->
+    <dimen name="xm_text_size_xxs">9.0sp</dimen>
+    <dimen name="xm_text_size_xs">11.0sp</dimen>
+    <dimen name="xm_text_size_s">13.0sp</dimen>
+    <dimen name="xm_text_size_m">15.0sp</dimen>
+    <dimen name="xm_text_size_l">17.0sp</dimen>
+    <dimen name="xm_text_size_xl">24.0sp</dimen>
+    <dimen name="xm_text_size_xxl">40.0sp</dimen>
+
+    <!--水平和垂直padding-->
+    <dimen name="xm_padding_vertical">10.0dip</dimen>
+    <dimen name="xm_padding_horizontal">15.0dip</dimen>
+    <!--文字与其他控件之间的距离-->
+    <dimen name="xm_drawable_padding">4.0dip</dimen>
+    <dimen name="xm_text_horizontal_space">10.0dip</dimen>
+    <dimen name="xm_text_vertical_space">6.0dip</dimen>
+    <!--默认按钮圆角大小-->
+    <dimen name="xm_button_corner">4dp</dimen>
+    <!--块分割线大小-->
+    <dimen name="xm_block_divider">15dp</dimen>
+    <dimen name="xm_divider_height">0.67dip</dimen>
+    <!--item layout的padding值-->
+    <dimen name="xm_item_layout_padding_vertical">15.0dip</dimen>
+    <dimen name="xm_item_layout_padding_horizontal">15.0dip</dimen>
+
+
+</resources>

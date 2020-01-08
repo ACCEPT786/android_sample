@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_Phone_Permission">小沐助教 使用电话权限确定本机号码和设备 ID,以保证账号登录的安全性.小沐助教不会拨打其他号码或终止通话.请在设置-应用-小沐助教-权限
+        已正常登录小沐助教.
+    </string>
+
+
+    <string name="tab_home">工作</string>
+    <string name="tab_financial">数据</string>
+    <string name="tab_mine">我的</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        style="@style/XmItemLayout.Padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="@dimen/portrait_size"
+            android:layout_height="@dimen/portrait_size" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xm_padding_horizontal"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTeacherName"
+                style="@style/ItemText"
+                tools:text="老师" />
+
+            <TextView
+                android:id="@+id/tvTeacherSubject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/xm_text_vertical_space"
+                android:singleLine="true"
+                android:textColor="@color/xm_text_tertiary"
+                android:textSize="@dimen/xm_text_size_s"
+                tools:text="语文" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvClassHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xm_padding_horizontal"
+            android:textColor="@color/xm_text_secondary"
+            android:textSize="@dimen/xm_text_size_m"
+            tools:text="本月0课时" />
+    </LinearLayout>
+</layout>

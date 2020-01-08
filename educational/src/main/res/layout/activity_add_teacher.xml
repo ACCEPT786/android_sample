@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="layout/add_teacher_activity_0">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            app:title="@string/add_teacher_title"
+            style="@style/BaseToolBar"/>
+
+        <View style="@style/BlockDivider" />
+
+        <LinearLayout
+            android:id="@+id/portraitBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText.Flexible"
+                android:text="@string/ae_teacher_avatar" />
+
+            <ImageView
+                android:layout_width="@dimen/portrait_size"
+                android:layout_height="@dimen/portrait_size"
+                android:src="@drawable/img_inst_default" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/ic_indicator_gray_right" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_name" />
+
+            <EditText
+                android:id="@+id/name_view"
+                style="@style/ItemContentText"
+                android:hint="@string/ae_teacher_mandatory"
+                android:inputType="text"
+                android:maxLength="20" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout
+            android:id="@+id/genderBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_gender" />
+
+            <TextView
+                android:id="@+id/gender_view"
+                style="@style/ItemContentText.RightIndicator"
+                android:hint="@string/ae_pls_select" />
+        </LinearLayout>
+
+        <View style="@style/XmDivisionLine" />
+
+        <LinearLayout style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_phone" />
+
+            <EditText
+                android:id="@+id/phone_view"
+                style="@style/ItemContentText"
+                android:hint="@string/ae_teacher_phone_hint"
+                android:inputType="phone" />
+        </LinearLayout>
+
+        <TextView
+            style="@style/Tip"
+            android:text="@string/ae_teacher_phone_tip" />
+
+        <LinearLayout
+            android:id="@+id/subjectBlock"
+            style="@style/XmItemLayout.Padding">
+
+            <TextView
+                style="@style/ItemTitleText"
+                android:text="@string/ae_teacher_subject" />
+
+            <TextView
+                android:id="@+id/subject_view"
+                style="@style/ItemContentText.RightIndicator"
+                android:hint="@string/ae_pls_select"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

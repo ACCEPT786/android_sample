@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="43.0dip"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/verifyCodeView"
+        android:layout_width="0.0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:hint="@string/verify_code_hint"
+        android:inputType="numberSigned"
+        android:paddingStart="@dimen/xm_padding_horizontal"
+        android:paddingEnd="@dimen/xm_text_horizontal_space"
+        android:textColorHint="@color/xm_text_hint"
+        android:textCursorDrawable="@null"
+        android:textSize="@dimen/xm_text_size_m" />
+
+    <View
+        android:layout_width="1.0dp"
+        android:layout_height="30.0dip"
+        android:layout_gravity="center_vertical"
+        android:background="@color/xm_divider" />
+
+    <TextView
+        android:id="@+id/verifyCodeButton"
+        android:layout_width="100.0dip"
+        android:layout_height="match_parent"
+        android:layout_margin="0.0dip"
+        android:background="@null"
+        android:gravity="center"
+        android:paddingStart="@dimen/xm_text_horizontal_space"
+        android:paddingEnd="@dimen/xm_padding_horizontal"
+        android:singleLine="true"
+        android:text="@string/get_verify_code"
+        android:textColor="@color/xm_text_blue"
+        android:textSize="@dimen/xm_text_size_m" />
+</LinearLayout>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--头部View-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="100.0dip"
+                    android:background="@drawable/mine_header" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/mineDataBlock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6.0dip"
+                    android:layout_marginTop="40.0dip"
+                    android:layout_marginEnd="6.0dip"
+                    android:background="@drawable/common_cover_bg">
+
+                    <View
+                        android:id="@+id/mineDataView"
+                        android:layout_width="0.0dip"
+                        android:layout_height="0.0dip"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginTop="8.0dip"
+                        app:layout_constraintBottom_toTopOf="@id/divider"
+                        app:layout_constraintEnd_toStartOf="@id/vipView"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/portraitView"
+                        android:layout_width="53.0dip"
+                        android:layout_height="53.0dip"
+                        android:layout_marginStart="16.0dip"
+                        android:layout_marginTop="20.0dip"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/vipView"
+                        android:layout_width="80.0dip"
+                        android:layout_height="0.0dip"
+                        android:layout_marginEnd="16.0dip"
+                        app:layout_constraintDimensionRatio="240:156"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/portraitView" />
+
+                    <TextView
+                        android:id="@+id/nameView"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8.0dip"
+                        android:layout_marginEnd="8.0dip"
+                        tools:text="姓名"
+                        android:singleLine="true"
+                        android:textColor="@color/xm_text_primary"
+                        android:textSize="@dimen/xm_text_size_l"
+                        app:layout_constraintBottom_toTopOf="@id/instTypeView"
+                        app:layout_constraintEnd_toStartOf="@id/vipView"
+                        app:layout_constraintStart_toEndOf="@id/portraitView"
+                        app:layout_constraintTop_toTopOf="@id/portraitView"
+                        app:layout_constraintVertical_chainStyle="spread" />
+
+                    <TextView
+                        android:id="@+id/instTypeView"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        tools:text="角色"
+                        android:singleLine="true"
+                        android:textColor="@color/xm_text_tertiary"
+                        android:textSize="@dimen/xm_text_size_s"
+                        app:layout_constraintBottom_toBottomOf="@id/portraitView"
+                        app:layout_constraintEnd_toEndOf="@id/nameView"
+                        app:layout_constraintStart_toStartOf="@id/nameView"
+                        app:layout_constraintTop_toBottomOf="@id/nameView" />
+
+                    <View
+                        android:id="@+id/divider"
+                        style="@style/XmDivisionLine"
+                        android:layout_width="0.0dip"
+                        android:layout_marginTop="@dimen/xm_padding_vertical"
+                        app:layout_constraintEnd_toEndOf="@id/vipView"
+                        app:layout_constraintStart_toStartOf="@id/portraitView"
+                        app:layout_constraintTop_toBottomOf="@id/portraitView" />
+
+                    <LinearLayout
+                        android:id="@+id/instNameBlock"
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/xm_padding_vertical"
+                        android:layout_marginBottom="@dimen/xm_padding_vertical"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@id/vipView"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@id/portraitView"
+                        app:layout_constraintTop_toBottomOf="@id/divider">
+
+                        <LinearLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/instNameView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                tools:text="机构名称"
+                                android:singleLine="true"
+                                android:textColor="@color/xm_text_tertiary"
+                                android:textSize="@dimen/xm_text_size_s" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4.0dip"
+                                android:singleLine="true"
+                                android:textColor="#ffff4f4f"
+                                android:textSize="@dimen/xm_text_size_s" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginStart="@dimen/xm_text_horizontal_space"
+                            android:text="@string/copy"
+                            android:textColor="@color/xm_text_blue"
+                            android:textSize="@dimen/xm_text_size_s" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?actionBarSize" />
+            </FrameLayout>
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/messageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_message_mine"
+                app:oiv_title="消息" />
+
+            <View style="@style/BlockDivider" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/systemManageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_system_manage"
+                app:oiv_title="账户管理" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/ruleSettingsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_rule_settings"
+                app:oiv_title="规则设置" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/renewView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_renew"
+                app:oiv_title="套餐续费" />
+
+            <View
+                style="@style/BlockDivider" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/customerServiceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_customer_service"
+                app:oiv_title="反馈" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/systemSettingsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_system_settings"
+                app:oiv_title="设置" />
+
+            <com.moon.libbase.widget.OptionItemView
+                android:id="@+id/aboutUsView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:oiv_icon="@drawable/ic_about"
+                app:oiv_title="关于小麦助教" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RatioImageView">
+        <attr name="ratio" format="float" />
+    </declare-styleable>
+
+    <attr name="XmBtnDisable" format="color" />
+    <attr name="XmBtnPressed" format="color" />
+    <attr name="XmBtnColor" format="color" />
+    <attr name="XmBtnCorners" format="dimension" />
+
+    <declare-styleable name="OptionItemView" >
+        <attr name="oiv_icon" format="reference"/>
+        <attr name="oiv_title" format="string"/>
+    </declare-styleable>
+</resources>

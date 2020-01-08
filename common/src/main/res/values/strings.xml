@@ -1,0 +1,27 @@
+<resources>
+    <string name="netError">网络错误</string>
+    <string name="unKnowError">错误,请重试</string>
+    <string name="miss_parameter">缺少参数</string>
+    <string name="server_error">服务器异常</string>
+    <!--用于tools测试单行或多行数据-->
+
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="just_now">刚刚</string>
+    <string name="timeLine">%1$d %2$s 之前</string>
+    <string name="minute">分</string>
+    <string name="hour">时</string>
+    <string name="month">月</string>
+    <string name="year">年</string>
+    <string name="day">日</string>
+
+    <string name="app_Storage_Permission">在设置-应用-小沐助教-权限中开启存储空间权限，以正常使用未来小沐功能.</string>
+
+    <string name="permission_tip">权限提示</string>
+
+
+    <string name="errorbook">错题试卷-%s</string>
+
+    <string name="token_error_tips">您的账号在其他设备登陆，请重新登录</string>
+
+</resources>

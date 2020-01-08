@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+
+    <color name="xm_divider">#ECEEEF</color>
+
+    <!--文字颜色-->
+    <color name="xm_text_primary">#4A4949</color>
+    <color name="xm_text_secondary">#7A7A7A</color>
+    <color name="xm_text_tertiary">#9F9F9F</color>
+
+    <color name="xm_text_hint">#ACACAC</color>
+    <color name="xm_text_blue">#55B8E2</color>
+    <color name="xm_text_red">#DE2626</color>
+
+    <color name="xm_background">#FBFBFB</color>
+
+
+</resources>

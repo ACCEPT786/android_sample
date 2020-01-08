@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="guide_next_step">下一步</string>
+    <string name="guide_skip">跳过</string>
+
+    <string name="xm_pull_to_refresh">下拉刷新</string>
+    <string name="xm_refresh_complete">刷新完成</string>
+    <string name="xm_refresh_failed">刷新失败</string>
+    <string name="xm_refreshing">正在加载</string>
+    <string name="xm_release">松开刷新</string>
+
+    <string name="xm_loading">正在努力加载</string>
+    <string name="xm_loading_retry">加载失败，点击重试</string>
+    <string name="xm_no_data">暂无数据</string>
+</resources>

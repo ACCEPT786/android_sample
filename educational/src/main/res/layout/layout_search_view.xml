@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/searchView"
+            style="@style/XmSearchEditText"
+            android:layout_width="0.0dip"
+            android:layout_weight="1.0"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/cancelView"
+            style="@style/ItemText.Padding"
+            android:text="@string/cancel"
+            android:textColor="@color/xm_text_secondary"
+            android:textSize="@dimen/xm_text_size_s"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.moon.widget.smartrefresh.RefreshRecyclerView
+        android:id="@+id/refreshRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+</merge>

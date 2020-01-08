@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RefreshRecyclerView">
+        <attr name="rrvEmptyText" format="string"/>
+        <attr name="rrvEmptyLayout" format="reference"/>
+        <attr name="rrvLoadingText" format="string"/>
+        <attr name="rrvLoadingLayout" format="reference"/>
+        <attr name="rrvRetryText" format="string"/>
+        <attr name="rrvRetryLayout" format="reference"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="XmStateView">
+        <attr name="emptyResource" format="reference" />
+        <attr name="emptyText" format="reference" />
+        <attr name="retryResource" format="reference" />
+        <attr name="retryText" format="reference" />
+        <attr name="loadingResource" format="reference" />
+        <attr name="loadingText" format="reference" />
+    </declare-styleable>
+
+</resources>

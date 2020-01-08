@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvStateTextView" type="id"/>
+    <item name="tvAnimationView" type="id"/>
+    <item name="root_id" type="id"/>
+
+</resources>

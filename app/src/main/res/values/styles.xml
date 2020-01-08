@@ -1,0 +1,23 @@
+<resources>
+
+    <style name="AppTheme" parent="BaseTheme">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="SplashGuideTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowBackground">@drawable/splash_bg</item>
+    </style>
+
+    <style name="bottomNavigationText">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="bottomNavigationText.inactive">
+        <item name="android:textSize">12sp</item>
+    </style>
+</resources>

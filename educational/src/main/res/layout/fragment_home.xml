@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            style="@style/BaseToolBar"
+            android:background="@drawable/home_header"
+            app:navigationIcon="@null">
+
+            <FrameLayout
+                android:id="@+id/instNameBlock"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/instNameView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/xm_text_size_l" />
+            </FrameLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            app:srlEnableLoadMore="false"
+            app:srlEnableRefresh="true">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--头部View-->
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="160.0dip"
+                        android:background="@drawable/home_header">
+                        <!--头像框架-->
+                        <ImageView
+                            android:id="@+id/avatarFrameView"
+                            android:layout_width="52.0dip"
+                            android:layout_height="52.0dip"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/xm_padding_horizontal"
+                            android:layout_marginTop="20.0dip"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/avatarView"
+                            android:layout_width="50.0dip"
+                            android:layout_height="50.0dip"
+                            android:layout_gravity="center"
+                            app:layout_constraintBottom_toBottomOf="@id/avatarFrameView"
+                            app:layout_constraintLeft_toLeftOf="@id/avatarFrameView"
+                            app:layout_constraintRight_toRightOf="@id/avatarFrameView"
+                            app:layout_constraintTop_toTopOf="@id/avatarFrameView" />
+
+                        <ImageView
+                            android:id="@+id/genderView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end|bottom|center"
+                            android:layout_marginEnd="4.0dip"
+                            app:layout_constraintBottom_toBottomOf="@id/avatarFrameView"
+                            app:layout_constraintRight_toRightOf="@id/avatarFrameView" />
+                        <!--名字-->
+                        <TextView
+                            android:id="@+id/nameView"
+                            style="@style/ItemText"
+                            android:layout_marginStart="@dimen/xm_padding_horizontal"
+                            android:paddingTop="2.0dip"
+                            android:textColor="@color/white"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toTopOf="@id/subjectView"
+                            app:layout_constraintLeft_toRightOf="@id/avatarFrameView"
+                            app:layout_constraintTop_toTopOf="@id/avatarFrameView"
+                            tools:text="老师" />
+                        <!--标签-->
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/subjectView"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3.0dip"
+                            android:layout_marginEnd="@dimen/xm_padding_horizontal"
+                            android:orientation="horizontal"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="@id/avatarFrameView"
+                            app:layout_constraintLeft_toLeftOf="@id/nameView"
+                            app:layout_constraintRight_toLeftOf="@id/messageBlock"
+                            app:layout_constraintTop_toBottomOf="@id/nameView" />
+                        <!--消息-->
+                        <FrameLayout
+                            android:id="@+id/messageBlock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/xm_padding_horizontal"
+                            app:layout_constraintBottom_toBottomOf="@id/avatarFrameView"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/avatarFrameView">
+
+                            <ImageView
+                                android:id="@+id/messageView"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="?selectableItemBackground"
+                                android:scaleType="center"
+                                android:src="@drawable/ic_message" />
+
+                            <TextView
+                                android:id="@+id/messageCountView"
+                                style="@style/CommonBadge"
+                                android:layout_gravity="end|center|top"
+                                android:visibility="invisible"
+                                tools:text="12"
+                                tools:visibility="visible" />
+                        </FrameLayout>
+
+                        <LinearLayout
+                            android:id="@+id/classHourBlock"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="18.0dip"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/dividerView0"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent">
+
+                            <TextView
+                                android:id="@+id/classHourView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_l"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/classHourTitleView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/month_class_hour"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_xs" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/dividerView0"
+                            android:layout_width="1.0dp"
+                            android:layout_height="32.0dip"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@id/classHourBlock"
+                            app:layout_constraintEnd_toStartOf="@id/rewardBlock"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@id/classHourBlock" />
+
+                        <LinearLayout
+                            android:id="@+id/rewardBlock"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/classHourBlock"
+                            app:layout_constraintEnd_toStartOf="@id/dividerView1"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@id/dividerView0">
+
+                            <TextView
+                                android:id="@+id/rewardView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_l"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/rewardTitleView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/month_salary"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_xs" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/dividerView1"
+                            android:layout_width="1.0dp"
+                            android:layout_height="30.0dip"
+                            android:background="@color/white"
+                            app:layout_constraintBottom_toBottomOf="@id/classHourBlock"
+                            app:layout_constraintEnd_toStartOf="@id/scoreBlock"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@id/rewardBlock" />
+
+                        <LinearLayout
+                            android:id="@+id/scoreBlock"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            app:layout_constraintBottom_toBottomOf="@id/classHourBlock"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toEndOf="@id/dividerView1">
+
+                            <TextView
+                                android:id="@+id/scoreView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_l"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/scoreTitleView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/home_score"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/xm_text_size_xs" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHomeGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22.0dip"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="4" />
+
+                    <Button
+                        android:id="@+id/callNameButton"
+                        style="@style/CommonButtonStyle.Margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26.0dip"
+                        android:layout_marginBottom="30.0dip"
+                        android:text="@string/call_name"
+                        android:theme="@style/CommonButtonTheme" />
+
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+        <!--todo 底部系统设置,普通教师显示-->
+        <FrameLayout
+            android:id="@+id/systemSettingsBlock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/xm_padding_horizontal"
+                android:layout_marginTop="13.0dip"
+                android:layout_marginEnd="@dimen/xm_padding_horizontal"
+                android:layout_marginBottom="13.0dip"
+                android:text="@string/system_setting"
+                android:textColor="@color/xm_text_secondary"
+                android:textSize="@dimen/xm_text_size_m" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/guideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

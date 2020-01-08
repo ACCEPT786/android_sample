@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_marginStart="20.0dip"
+        android:layout_marginTop="@dimen/xm_padding_vertical"
+        android:layout_marginBottom="@dimen/xm_padding_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/indicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/xm_padding_horizontal"
+        android:src="@drawable/ic_indicator_gray_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/xm_padding_horizontal"
+        android:layout_marginEnd="@dimen/xm_padding_horizontal"
+        android:textColor="@color/xm_text_primary"
+        android:textSize="@dimen/xm_text_size_l"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toEndOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        tools:text="消息" />
+
+    <TextView
+        android:id="@+id/messageCountView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8.0dip"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textSize="@dimen/xm_text_size_xs"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toStartOf="@id/indicatorView"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        tools:text="123"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/divider"
+        style="@style/XmDivisionLine"
+        android:layout_width="0.0dip"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/titleView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
